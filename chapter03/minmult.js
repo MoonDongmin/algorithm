@@ -4,7 +4,6 @@ function minmult(n, d) {
   // p: 최적의 분할 위치를 저장하는 배열
   let m = Array(n + 1).fill().map(() => Array(n + 1).fill(0));
   let p = Array(n + 1).fill().map(() => Array(n + 1).fill(0));
-  console.log(m);
   // 연쇄 행렬의 길이
   for (let diagonal = 1; diagonal < n; diagonal++) {
     // 시작 행렬
@@ -24,6 +23,7 @@ function minmult(n, d) {
         }
       }
     }
+    console.log(m);
   }
 
   return {m, p};
@@ -41,7 +41,7 @@ function order(p, i, j) {
   }
 }
 
-let d = [5, 4, 6, 2, 7];  // 4개의 행렬: 5×4, 4×6, 6×2, 2×7
+let d = [1, 2, 3, 4];  // 4개의 행렬: 5×4, 4×6, 6×2, 2×7
 let n = d.length - 1;      // 행렬의 개수
 let result = minmult(n, d);
 
