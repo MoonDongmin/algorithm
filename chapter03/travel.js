@@ -1,26 +1,14 @@
-// function travel(graph) {
-//   let n = graph.length;
-//
-//   console.log(n);
-// }
-//
-// let graph = [
-//   [0, 3, Infinity, 7],
-//   [8, 0, 2, Infinity],
-//   [5, Infinity, 0, 1],
-//   [2, Infinity, Infinity, 0],
-// ];
-//
-// travel(graph);
-
 function tsp(n, W) {
-  let D = Array.from({ length: n + 1 }, () => ({}));
-  let P = Array.from({ length: n + 1 }, () => ({}));
+  // D: 도시 i를 방문 집합 A를 지나서 1번으로 돌아가는 최소 비용
+  // P: i에서 A를 방문할 때, 최적 경로에서 마지막 방문한 도시
+  let D = Array.from({length: n + 1}, () => ({}));
+  let P = Array.from({length: n + 1}, () => ({}));
 
   // 초기 설정: 각 도시에서 1번으로 가는 비용 저장
   for (let i = 2; i <= n; i++) {
-    D[i]["{}"] = W[i][1];
+    D[i]['{}'] = W[i][1];
   }
+  console.log(D);
 
   // 방문하는 도시 개수별로 탐색
   for (let k = 1; k <= n - 2; k++) {
@@ -59,13 +47,14 @@ function tsp(n, W) {
     }
   }
 
-  return { minLength: minCost, pathTable: P };
+  return {minLength: minCost, pathTable: P};
 }
 
-// 서브셋을 만드는 함수
+// 크기가 k인 부분집합을 생성해 탐색
 function getSubsets(n, k) {
   let subsets = [];
   let elements = [...Array(n + 1).keys()].slice(2);
+  console.log(elements);
 
   function generate(subset, index) {
     if (subset.size === k) {
@@ -85,7 +74,7 @@ function getSubsets(n, k) {
 
 // Set을 문자열로 변환 (메모이제이션용)
 function setToString(set) {
-  return `{${[...set].join(",")}}`;
+  return `{${[...set].join(',')}}`;
 }
 
 // Set에서 특정 원소 제거
@@ -100,9 +89,9 @@ let W = [
   [0, 0, 10, 15, 20],
   [0, 10, 0, 35, 25],
   [0, 15, 35, 0, 30],
-  [0, 20, 25, 30, 0]
+  [0, 20, 25, 30, 0],
 ];
 
 let result = tsp(4, W);
-console.log("최소 비용:", result.minLength);
-console.log("경로 테이블:", result.pathTable);
+console.log('최소 비용:', result.minLength);
+console.log('경로 테이블:', result.pathTable);

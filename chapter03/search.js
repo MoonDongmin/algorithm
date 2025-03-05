@@ -3,7 +3,7 @@ function search(tree, keyin) {
 
   while (index < tree.length) {
     if (tree[index] === keyin) return index;
-    else if (value < tree(index)) index = index * 2;
+    else if (keyin < tree[index]) index = index * 2;
     else index = index * 2 + 1;
   }
 
