@@ -25,6 +25,7 @@ function prim(n, W) {
 
     // 선택된 정점과 연결된 edge를 MST에 추가
     F.push([vnear, nearest[vnear]]);
+    console.log(F);
 
     // 선택된 정점 vnear를 Y 집합에 추가
     distance[vnear] = -1;

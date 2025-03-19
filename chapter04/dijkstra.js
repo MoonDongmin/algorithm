@@ -28,6 +28,7 @@ function dijkstra(n, W) {
 
     if (vnear === -1) break; // 모든 정점 방문 완료
 
+    console.log(F);
     F.push([touch[vnear], vnear, min]);
 
     for (let i = 1; i <= n; i++) {
@@ -44,7 +45,7 @@ function dijkstra(n, W) {
 }
 
 const INF = Number.MAX_SAFE_INTEGER;
-const n = 5;
+const n = 6;
 const W = [
   [0, 0, 0, 0, 0, 0],
   [0, 0, 10, INF, 30, 100],

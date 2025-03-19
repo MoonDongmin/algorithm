@@ -5,6 +5,12 @@ function kruskal(n, m, E) {
   let rank = new Array(n + 1).fill(0);
   console.log(parent, rank);
 
+  // [1, 2, 1],
+  //   [1, 3, 3],
+  //   [2, 3, 2],
+  //   [2, 4, 4],
+  //   [3, 4, 5],
+
   function find(x) {
     if (parent[x] !== x) {
       parent[x] = find(parent[x]); // 경로 압축
