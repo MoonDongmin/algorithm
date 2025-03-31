@@ -8,3 +8,5 @@
 [Chapter03. 동적계획](https://moondongmin.notion.site/Chapter03-1a0357c44e568088b1f1c49801e4d175?pvs=4)
 
 [Chapter 04. 탐욕 알고리즘](https://moondongmin.notion.site/Chapter-04-1b2357c44e568070a92bc0b96b5df32e?pvs=4)
+
+[Chapter 05. 되추적](https://moondongmin.notion.site/Chapter-05-1c0357c44e56800a8903e9bac9a6c1f5?pvs=4)
