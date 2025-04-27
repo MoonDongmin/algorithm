@@ -12,3 +12,5 @@
 [Chapter 05. 되추적](https://moondongmin.notion.site/Chapter-05-1c0357c44e56800a8903e9bac9a6c1f5?pvs=4)
 
 [Chapter 06. 분기한정법](https://moondongmin.notion.site/Chapter-06-1cf357c44e56800aa6a7d92c72a93378?pvs=4)
+
+[Chapter 07. 계산복잡도의 소개: 정렬문제](https://moondongmin.notion.site/Chapter-07-1e2357c44e5680e5a2c8f28daa3bae26?pvs=4)
